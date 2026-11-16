@@ -1,6 +1,6 @@
-{
+﻿{
   "name": "dsh-agents-keeper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Keeps a workspace AGENTS.md in sync: detects real changes, drafts an updated or compacted version in a subagent, previews the diff, and only writes after you confirm. Pairs with the built-in AGENTS.md loader instead of replacing it.",
   "keywords": [
     "deepseek-harness",
