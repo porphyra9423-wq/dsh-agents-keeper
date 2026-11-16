@@ -18,12 +18,13 @@ DeepSeek Harness 内置的 `@deepseek-ai/dsh-agent-instructions` 已经把 `AGEN
 
 ### 安装
 
-这个包**没有发布到 npm**，按本地目录安装（也是作者自己的用法）：
+已发布到 npm（`dsh-agents-keeper`）：
 
-1. 在插件管理里选「安装本地目录」，指向仓库里的 `dsh-agents-keeper/`；
-2. 或者命令行 `dsh plugin add <本目录绝对路径>`。
+1. 在插件市场或插件管理里搜索安装；
+2. 或者命令行 `dsh plugin add dsh-agents-keeper`；
+3. 想改源码就在本仓库里开发——把插件管理里的那一行改成指向本目录的链接（`dsh plugin add <本目录绝对路径>`），本地 link 下**改源码即时生效**，禁用→启用一次即可重新加载，不必重装、不必重启 DSH。
 
-成功后在 desktop profile 里会多出 `include:agents-keeper` 一行。因为是本地 link，**改源码即时生效**，只要在插件管理里禁用→启用一次让它重新加载即可，不必重装、不必重启 DSH。目录一旦删除或改名，插件就会加载失败——要挪位置，先在新位置装好再删旧的。
+装好后在 desktop profile 里会多出 `include:agents-keeper` 一行。
 
 装上后插件会自动注册 4 个工具、4 条命令，并在设置页加一栏「工作区指南」。
 
@@ -101,7 +102,7 @@ DeepSeek Harness ships `@deepseek-ai/dsh-agent-instructions`, which loads `AGENT
 
 ### Install
 
-Not published to npm — install it from a local checkout: use "install local directory" in the plugin manager, or `dsh plugin add <absolute path to this folder>`. It lands in the desktop profile as the `include:agents-keeper` row. Because it is a local link, source edits take effect on the next disable→enable; moving or deleting the folder breaks the plugin, so install the new location before removing the old one.
+Published on npm as `dsh-agents-keeper`: install it from the plugin market or with `dsh plugin add dsh-agents-keeper`. To develop on it, link the local checkout instead — `dsh plugin add <absolute path to this folder>`; under a local link, source edits take effect on the next disable→enable. It lands in the desktop profile as the `include:agents-keeper` row.
 
 The bundle registers four tools, four commands, and a "Workspace guide" settings section.
 
