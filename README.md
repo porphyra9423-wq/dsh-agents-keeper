@@ -18,13 +18,12 @@ DeepSeek Harness 内置的 `@deepseek-ai/dsh-agent-instructions` 已经把 `AGEN
 
 ### 安装
 
-```bash
-# 从 GitHub 安装（尚未发 npm 时用这个）
-dsh plugin add https://github.com/porphyra9423-wq/dsh-agents-keeper
+这个包**没有发布到 npm**，按本地目录安装（也是作者自己的用法）：
 
-# 发布到 npm 之后
-dsh plugin install dsh-agents-keeper
-```
+1. 在插件管理里选「安装本地目录」，指向仓库里的 `dsh-agents-keeper/`；
+2. 或者命令行 `dsh plugin add <本目录绝对路径>`。
+
+成功后在 desktop profile 里会多出 `include:agents-keeper` 一行。因为是本地 link，**改源码即时生效**，只要在插件管理里禁用→启用一次让它重新加载即可，不必重装、不必重启 DSH。目录一旦删除或改名，插件就会加载失败——要挪位置，先在新位置装好再删旧的。
 
 装上后插件会自动注册 4 个工具、4 条命令，并在设置页加一栏「工作区指南」。
 
@@ -102,9 +101,7 @@ DeepSeek Harness ships `@deepseek-ai/dsh-agent-instructions`, which loads `AGENT
 
 ### Install
 
-```bash
-dsh plugin install dsh-agents-keeper
-```
+Not published to npm — install it from a local checkout: use "install local directory" in the plugin manager, or `dsh plugin add <absolute path to this folder>`. It lands in the desktop profile as the `include:agents-keeper` row. Because it is a local link, source edits take effect on the next disable→enable; moving or deleting the folder breaks the plugin, so install the new location before removing the old one.
 
 The bundle registers four tools, four commands, and a "Workspace guide" settings section.
 
