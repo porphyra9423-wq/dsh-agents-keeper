@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Workspace guide keeper",
+    "description": "Detects real project changes, drafts an updated or compacted AGENTS.md in a background subagent, shows the diff, and writes only after a backup. Works with the built-in AGENTS.md loader instead of replacing it."
+  }
+}

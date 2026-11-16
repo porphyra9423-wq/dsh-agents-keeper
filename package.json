@@ -1,0 +1,66 @@
+{
+  "name": "dsh-agents-keeper",
+  "version": "0.1.0",
+  "description": "Keeps a workspace AGENTS.md in sync: detects real changes, drafts an updated or compacted version in a subagent, previews the diff, and only writes after you confirm. Pairs with the built-in AGENTS.md loader instead of replacing it.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "agents-md",
+    "instructions",
+    "documentation",
+    "maintenance"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "references/methodology.md",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/porphyra9423-wq/dsh-agents-keeper.git"
+  },
+  "homepage": "https://github.com/porphyra9423-wq/dsh-agents-keeper#readme",
+  "bugs": {
+    "url": "https://github.com/porphyra9423-wq/dsh-agents-keeper/issues"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  }
+}

@@ -1,0 +1,11 @@
+# Composition patch: insert this plugin's row into the host bundle.
+# The row lives on the HOST plane so its tools, commands and HTTP routes are
+# available to every agent preset and every browser client.
+- insert:
+    - id: agents-keeper          # unique row id
+      name: dsh-agents-keeper    # MUST equal the package name
+      config:
+        maxBytes: 65536
+        minIntervalMinutes: 30
+        minChangedFiles: 3
+        provider: spawn

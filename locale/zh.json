@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "工作区指南维护",
+    "description": "发现项目真实变更后，在后台起草更新或精简版 AGENTS.md，先看 diff 再备份写入；与内置 AGENTS.md 加载器配合，不替代它。"
+  }
+}
