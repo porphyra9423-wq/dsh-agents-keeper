@@ -19,7 +19,10 @@ DeepSeek Harness 内置的 `@deepseek-ai/dsh-agent-instructions` 已经把 `AGEN
 ### 安装
 
 ```bash
-# 在 DeepSeek Harness 的插件管理里安装本地目录，或
+# 从 GitHub 安装（尚未发 npm 时用这个）
+dsh plugin add https://github.com/porphyra9423-wq/dsh-agents-keeper
+
+# 发布到 npm 之后
 dsh plugin install dsh-agents-keeper
 ```
 
